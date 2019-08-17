@@ -28,14 +28,14 @@ typedef struct{
          cidade[CIDADE], uf[UF], cep[CEP], email[EMAIL];
     unsigned int Numero;
     float salario;
-}Funcionario;
+}TFuncionario;
 
 
 /// Estrutura HistoricoFuncionarios
 typedef struct{
     long id_funcionario, id_departamento;
     char data[DATA];
-}HistoricoFuncionario;
+}THistoricoFuncionario;
 
 
 /// Estrutura Departamento
@@ -43,14 +43,14 @@ typedef struct{
     long id, id_gerente;
     char nome[NOME_DEP], sigla[SIGLA];
     unsigned short int Ramal;
-}Departamento;
+}TDepartamento;
 
 
 /// Estrutura Historico Departamento
 typedef struct{
     long id_departamento, id_gerente;
     char data[DATA];
-}HistoricoDepartamento;
+}THistoricoDepartamento;
 
 
 /// Estrutura Historico Salario
@@ -59,10 +59,11 @@ typedef struct{
     float salario;
     unsigned short int mes, ano;
 
-}HistoricoSalario;
+}THistoricoSalario;
 
 
-int menu()
+void menu();
+int cadastro_dept(FILE*,TFuncionario*);
 
 
 
