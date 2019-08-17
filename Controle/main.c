@@ -37,3 +37,6 @@ int main(){
     fclose(arq_hist_dept);
     fclose(arq_hist_sal);
 }
+
+
+/// TESTANDO AQUI PEDRAO.
