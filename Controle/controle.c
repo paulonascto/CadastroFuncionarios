@@ -15,9 +15,21 @@ void menu(){
     }while(op>0 && op<12);
 }
 
-int cadastro_dept(FILE *arq_func,TFuncionario *func){
+int cadastro_dept(FILE *arq_func,TDepartamento *dept){
     int sair;
     do{
+        printf("\nInforme o Nome do Departamento:");
+        setbuf(stdin,NULL);
+        fgets(dept->nome,NOME_DEP,stdin);
+        if(pesquisa_nome(arq_func,dept.nome)){
+            printf("Codigo do Funcionário Gerente")
+            fscanf("%d",dept->id_gerente);
+        }
+
+        fseek(a,0,SEEK_END);
+        fwrite(&rf,sizeof(rf),1,a);
+
+        dept->id++;
         printf("Deseja sair:1-Sim 2-Não");
         scanf("%d",&sair);
     }while(sair!=2);

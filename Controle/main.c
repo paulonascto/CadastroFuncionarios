@@ -38,6 +38,3 @@ int main(){
     fclose(arq_hist_sal);
 }
 
-
-/// TUDO CERTO POR AQUI PAULETE
-

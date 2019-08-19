@@ -58,12 +58,11 @@ typedef struct{
     long id_funcionario;
     float salario;
     unsigned short int mes, ano;
-
 }THistoricoSalario;
 
 
 void menu();
-int cadastro_dept(FILE*,TFuncionario*);
+int cadastro_dept(FILE*,TDepartamento*);
 
 
 
