@@ -1,0 +1,65 @@
+#DICAS SOBRE DOCUMENTAÇÃO DAS FUNÇÕES
+
+Há quem diga que documentar um programa é o mesmo que escrever muitos comentários de mistura com o código.Isso está errado! Uma boa documentação não suja o código com comentários. Uma boa documentação limita-se a
+explicar o que cada função do programa faz.
+
+Uma boa documentação não perde tempo tentando explicar como a função faz o que faz, porque o leitor interessado nessa questão pode ler o código.
+
+A distinção entre o que e como é a mesma que existe entre a interface (arquivo .h) e a implementação (arquivo .c) de uma biblioteca C.  A seguinte analogia pode tornar mais clara a diferença. Uma empresa de entregas promete apanhar o seu pacote em São Paulo e entregá-lo em Manaus. Isso é o que a empresa faz. Como o serviço será feito — se o transporte será terrestre, aéreo ou marítimo, por exemplo — é assunto interno da empresa.
+
+Uma documentação correta é uma questão de honestidade intelectual, pois coloca nas mãos do leitor e do usuário a real possibilidade de detectar os erros que o autor possa ter cometido ao escrever o código.
+Em um dos capítulos deste sítio há uma função que encontra o valor de um elemento máximo de um vetor. Vamos repetir aqui o código daquela função juntamente com uma documentação perfeita:
+
+// A seguinte função recebe um número n >= 1
+// e um vetor v e devolve o valor de um 
+// elemento máximo de v[0..n-1].
+
+int max (int n, int v[]) { 
+   int x = v[0];
+   for (int j = 1; j < n; j += 1)
+      if (x < v[j]) 
+         x = v[j];
+   return x;
+}
+
+Veja como a documentação é simples e precisa. A documentação diz o que a função faz mas não perde tempo tentando explicar como a função faz o que faz (por exemplo, se a função é recursiva ou iterativa, se percorre o vetor da esquerda para a direita ou vice-versa).  Observe também que não há comentários inúteis (como o índice j vai percorrer o vetor) sujando o código da função.
+
+Eis alguns exemplos de má documentação. Dizer apenas que a função
+devolve o valor de um elemento máximo de um vetor é indecentemente vago, pois nem sequer menciona os parâmetros (n e v) da função!  Dizer que a função devolve o valor de um elemento máximo do vetor v é um pouquinho melhor, mas ainda muito vago: o leitor fica sem saber qual o papel do parâmetro n.  Dizer que a função devolve o valor de um elemento máximo de um vetor v que tem n elementos é melhor, mas ainda está vago: não se sabe se o vetor é v[0..n-1] ou v[1..n].  
+
+Dizer que a função devolve o valor de um elemento máximo de v[0..n-1] já está quase bom, mas sonega a informação de que a função só faz sentido e funciona corretamente se  n ≥ 1.
+
+#DICAS SOBRE PONTEIROS PARA ESTRUTURAS
+
+Se estiver apelidando a struct no main você deve passar o o endereço de memória da estrutura para que ela possa ser alterada, ou seja, um ponteiro! Porém, se você, chamar a struct dentro da função não é necessário passar a struct como parâmetro da função.
+
+Ex: //PASSANDO A STRUCT COMO UM PARAMÊTRO DA FUNÇÃO(BOAS PRÁTICAS DE PROGRAMAÇÃO)
+
+struct typedef{
+    int nome[10];
+}TAluno; 
+
+void adiciona_aluno(TAluno *al){
+    al->nome="pedro";//*(al).nome="pedro"
+}
+
+int main(){
+    TAluno aln;
+    adiciona_aluno(&aln//PASSANDO A STRUCT COMO PARAMÊTRO);
+}
+
+Ex: //CHAMANDO A STRUCT DENTRO DA FUNÇÃO(PŔATICA NÃO ACONSELHÁVEL DE PROGRAMAÇÃO, POIS A STRUCT SE TORNARÁ UMA VARIÁVEL LOCAL DA FUNÇÃO)
+
+struct typedef{
+    int nome[10];
+}TAluno; 
+
+void adiciona_aluno(int *aluno){
+    TAluno aln;
+    aln.nome = aluno;
+}
+
+int main(){
+    int al="pedro";    
+    adiciona_aluno(&al);
+}

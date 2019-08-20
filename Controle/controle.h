@@ -33,7 +33,7 @@ typedef struct{
 
 /// Estrutura HistoricoFuncionarios
 typedef struct{
-    long id_funcionario, id_departamento;
+    long int id_funcionario, id_departamento;
     char data[DATA];
 }THistoricoFuncionario;
 
@@ -60,9 +60,19 @@ typedef struct{
     unsigned short int mes, ano;
 }THistoricoSalario;
 
+    TFuncionario func;
+    THistoricoFuncionario hist_func;
+    TDepartamento dept;
+    THistoricoDepartamento hist_dept;
+    THistoricoSalario hist_sal;
+
+FILE *arq_func, *arq_hist_func, *arq_dept,*arq_hist_dept,*arq_hist_sal;
+
 
 void menu();
-int cadastro_dept(FILE*,TDepartamento*);
+int cadastro_dept(FILE*, TDepartamento*);
+int verificaVazio(char*);
+void retiraEnter(char*);
 
 
 
