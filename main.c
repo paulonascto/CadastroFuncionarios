@@ -23,6 +23,7 @@ int main(){
     }
     if(arq_func || arq_hist_func || arq_dept || arq_hist_dept || arq_hist_sal){
         menu();
+        fclose(arq_dept);
     }
     //fclose(arq_func);
     //fclose(arq_hist_func);

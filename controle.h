@@ -74,7 +74,7 @@ int cadastro_dept(FILE*, TDepartamento*);
 int verificaVazio(char*);
 void retiraEnter(char*);
 int verificaNum(char*);
-
+void exibeDept(FILE*, TDepartamento*);
 
 
 #endif // CONTROLE_H_INCLUDED
