@@ -26,7 +26,7 @@ int main(){
     }
     //fclose(arq_func);
     //fclose(arq_hist_func);
-   // fclose(arq_dept);
+    //fclose(arq_dept);
     //fclose(arq_hist_dept);
    // fclose(arq_hist_sal);
 

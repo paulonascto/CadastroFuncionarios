@@ -40,7 +40,7 @@ typedef struct{
 
 /// Estrutura Departamento
 typedef struct{
-    long id, id_gerente;
+    long int id, id_gerente;
     char nome[NOME_DEP], sigla[SIGLA];
     unsigned short int Ramal;
 }TDepartamento;
@@ -73,6 +73,7 @@ void menu();
 int cadastro_dept(FILE*, TDepartamento*);
 int verificaVazio(char*);
 void retiraEnter(char*);
+int verificaNum(char*);
 
 
 

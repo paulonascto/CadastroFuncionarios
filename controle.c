@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include <ctype.h>
 #include "controle.h"
 
 void menu(){
@@ -38,15 +39,30 @@ void retiraEnter(char *string){
 //E verifica, se a variável contém ao menos uma palavra
 //Retorna 0, caso a variável estiver vazia
 int verificaVazio(char *palavra){
+    int i;
     if(strlen(palavra)==0)
         return 0;
+    for(i=0;i<NOME;i++)
+        if((palavra[i])==' ' || isdigit(palavra[i]>0))
+            return 0;
     return 1;
 }
 
-int cadastro_dept(FILE *arq_func, TDepartamento *dept){
+int verificaNum(char *ramal){
+    int i;
+    for(i=0;i<10;i++){
+            printf("%s\n", ramal);
+        if(isalpha(ramal[i])>0){
+            return 0;
+        }
+    }
+    return 1;
+}
+int cadastro_dept(FILE *arq_dept, TDepartamento *dept){
     int sair;
+    char verificaRamal[10];
     do{
-       /* do{
+        do{
             system("clear || cls");
             setbuf(stdin,NULL);
 
@@ -59,12 +75,15 @@ int cadastro_dept(FILE *arq_func, TDepartamento *dept){
         fgets(dept->sigla, SIGLA, stdin);
         retiraEnter(dept->sigla);
         //Colocar o DO/WHILE, e fazer a verificação do dept->ramal, sendo que só pode aceitar numeros
+        do{
         printf("Digite o Número do RAMAL: ");
-        scanf("%hu", &dept->Ramal);
+        setbuf(stdin,NULL);
+        fgets(verificaRamal, 10, stdin);
+        retiraEnter(verificaRamal);
+        }while(verificaNum(verificaRamal)==0);
         dept->id++;
-        */
-        fseek(arq_func,0,SEEK_END);
-        fread(&dept,sizeof(TDepartamento),1, arq_func);
+        fseek(arq_dept,0,SEEK_END);
+        fread(dept, sizeof(TDepartamento), 1, arq_dept);
         printf("id: %li\n", dept->id);
         printf("id gerente: %li\n", dept->id_gerente);
         printf("nome: %s\n", dept->nome);
