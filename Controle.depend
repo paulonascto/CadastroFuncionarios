@@ -91,13 +91,64 @@
 	<locale.h>
 	"controle.h"
 
-1566344018 d:\mega\tsi\cadastrofuncionarios\controle.h
+1566347564 d:\mega\tsi\cadastrofuncionarios\controle.h
 
-1566345184 source:d:\mega\tsi\cadastrofuncionarios\controle.c
+1566348719 source:d:\mega\tsi\cadastrofuncionarios\controle.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	<ctype.h>
+	"controle.h"
+
+1566348720 source:j:\ed i\tp 1\cadastrofuncionarios\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566347566 j:\ed i\tp 1\cadastrofuncionarios\controle.h
+
+1566344542 source:j:\ed i\tp 1\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566394308 source:c:\users\usuario\music\cadastrofuncionarios\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566394491 c:\users\usuario\music\cadastrofuncionarios\controle.h
+
+1566344542 source:c:\users\usuario\music\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566422221 source:c:\users\usuario\desktop\cadastrofuncionarios\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566394492 c:\users\usuario\desktop\cadastrofuncionarios\controle.h
+
+1566421354 source:c:\users\usuario\desktop\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
 	"controle.h"
 

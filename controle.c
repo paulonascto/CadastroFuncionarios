@@ -13,25 +13,29 @@ void menu(){
         scanf("%d",&op);
         switch(op){
         case 1:
-            if(cadastro_dept(arq_dept, &dept)==1){
+            if(cadastro_dept(arq_dept)==1){
                 system("clear || cls");
                 printf("\nCadastro de Departamento Realizado!\n");
+
             }
+        break;
         case 2:
-            exibeDept(arq_dept, &dept);
+            exibeDept(arq_dept);
+            break;
         }
     }while(op>0 && op<12);
 }
 
-void exibeDept(FILE *a, TDepartamento *dept){
-    system("clear || cls");
-    fseek(arq_dept,0,SEEK_SET);
-    while(fread(dept, sizeof(TDepartamento), 1, arq_dept)==1){
-        printf("id: %li\n", dept->id);
-        printf("id gerente: %li\n", dept->id_gerente);
-        printf("nome: %s\n", dept->nome);
-        printf("ramal: %hu\n", dept->Ramal);
-        printf("sigla: %s\n", dept->sigla);
+
+void exibeDept(FILE *a){
+    TDepartamento dept;
+    fseek(a,0,SEEK_SET);
+    while(fread(&dept, sizeof(TDepartamento), 1, a)==1){
+        printf("id: %li\n", dept.id);
+        printf("id gerente: %li\n", dept.id_gerente);
+        printf("nome: %s\n", dept.nome);
+        printf("ramal: %hu\n", dept.Ramal);
+        printf("sigla: %s\n", dept.sigla);
     }
 }
 
@@ -52,12 +56,17 @@ void retiraEnter(char *string){
 //E verifica, se a variável contém ao menos uma palavra
 //Retorna 0, caso a variável estiver vazia
 int verificaVazio(char *palavra){
-    int i;
+    int i,t;
     if(strlen(palavra)==0)
         return 0;
-    for(i=0;i<strlen(palavra);i++)
-        if((palavra[i])==' ' || isdigit(palavra[i]>0))
+    if(palavra[0]==' ')
+        return 0;
+    for(i=0;i<strlen(palavra);i++){
+        t=isdigit(palavra[i]);
+        printf("%d",t);
+        if(t==1)
             return 0;
+    }
     return 1;
 }
 
@@ -70,7 +79,8 @@ int verificaNum(char *ramal){
     }
     return 1;
 }
-int cadastro_dept(FILE *arq_dept, TDepartamento *dept){
+int cadastro_dept(FILE *arq_dept){
+    TDepartamento dept;
     int sair;
     char verificaRamal[10];
     do{
@@ -78,24 +88,24 @@ int cadastro_dept(FILE *arq_dept, TDepartamento *dept){
             system("clear || cls");
             setbuf(stdin,NULL);
             printf("\nInforme o Nome do Departamento: ");
-            fgets(dept->nome, NOME_DEP, stdin);
-            retiraEnter(dept->nome);
-        }while(verificaVazio(dept->nome)==0);
+            fgets(dept.nome, NOME_DEP, stdin);
+            retiraEnter(dept.nome);
+        }while(verificaVazio(dept.nome)==0);
         printf("Digite o nome da sigla: ");
         setbuf(stdin,NULL);
-        fgets(dept->sigla, SIGLA, stdin);
-        retiraEnter(dept->sigla);
+        fgets(dept.sigla, SIGLA, stdin);
+        retiraEnter(dept.sigla);
         //Colocar o DO/WHILE, e fazer a verificação do dept->ramal, sendo que só pode aceitar numeros
         do{
-        printf("Digite o Número do RAMAL: ");
-        setbuf(stdin,NULL);
-        fgets(verificaRamal, 10, stdin);
-        retiraEnter(verificaRamal);
+            printf("Digite o Número do RAMAL: ");
+            setbuf(stdin,NULL);
+            fgets(verificaRamal, 10, stdin);
+            retiraEnter(verificaRamal);
         }while(verificaNum(verificaRamal)==0);
-        dept->Ramal = strtol(verificaRamal, NULL, 10);
-        dept->id++;
+        dept.Ramal = strtol(verificaRamal, NULL, 10);
         fseek(arq_dept,0,SEEK_END);
-        fwrite(dept, sizeof(TDepartamento), 1, arq_dept);
+        dept.id = (ftell(arq_dept)/sizeof(TDepartamento)) + 1;
+        fwrite(&dept, sizeof(TDepartamento), 1, arq_dept);
         printf("Deseja sair:1-Sim 2-Não");
         scanf("%d",&sair);
     }while(sair != 1);
