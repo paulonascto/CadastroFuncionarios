@@ -152,3 +152,37 @@
 	<locale.h>
 	"controle.h"
 
+1566477162 source:/home/aluno/Documentos/PH/CadastroFuncionarios/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566475238 /home/aluno/Documentos/PH/CadastroFuncionarios/controle.h
+
+1566497209 source:/home/aluno/Documentos/PH/CadastroFuncionarios/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566477162 source:/media/aluno/PEDROFACUL/CadastroFuncionarios/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566475238 /media/aluno/PEDROFACUL/CadastroFuncionarios/controle.h
+
+1566497209 source:/media/aluno/PEDROFACUL/CadastroFuncionarios/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+

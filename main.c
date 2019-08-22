@@ -2,9 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include "controle.c"
 #include "controle.h"
 
 int main(){
+
+    TDepartamento dept;
+    TFuncionario func;
 
     setlocale(LC_ALL, "Portuguese");
 

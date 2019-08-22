@@ -66,11 +66,23 @@ FILE *arq_func, *arq_hist_func, *arq_dept,*arq_hist_dept,*arq_hist_sal;
 
 
 void menu();
+
+///FUNÇÕES PRINCIPAIS DE CADASTRO
 int cadastro_dept(FILE*);
-int verificaVazio(char*);
+int cadastro_func(FILE*);
+
+///FUNÇÕES UTILIZADAS PARA FAZER DIVERSAS VERIFICACOES
+int verificaLetra(char*);
 void retiraEnter(char*);
 int verificaNum(char*);
+int pesquisa_Matricula(FILE*,char*);
+int verificarData(char*);
+int ultimoDia(int *data);
+int bissexto(int *data);
+
+///FUNÇÕES QUE DEVEMOS LEMBRAR DE APAGAR
 void exibeDept(FILE*);
+void exibeFunc(FILE *a);
 
 
 #endif // CONTROLE_H_INCLUDED
