@@ -18,15 +18,18 @@ void menu(){
                 printf("\nCadastro de Departamento Realizado!\n");
             }
         break;
+
         case 2:
             if(cadastro_func(arq_func)){
                 system("clear || cls");
                 printf("\nCadastro de Funcionário Realizado!\n");
             }
         break;
+
         case 12:
             exibeDept(arq_dept);
             break;
+
         case 13:
             exibeFunc(arq_func);
             break;
@@ -186,7 +189,7 @@ int cadastro_func(FILE *arq_func){
             printf("\nDigite a Data de Nascimento (Ex: dd/mm/aaaa): ");
             fgets(func.dataNascimento,DATA,stdin);
             retiraEnter(func.dataNascimento);
-        }while(verificarData(func.dataNascimento)==0);
+        }while(verificaData(func.dataNascimento)==0);
 
 
         fseek(arq_dept,0,SEEK_END);
@@ -198,48 +201,63 @@ int cadastro_func(FILE *arq_func){
     return 1;
 }
 
-//Verifica se o ano é bissexto ou não, retorna 0
-//caso não for
-int bissexto(int *data){
-    return(data[2]%4==0 && data[2]%100!=0) || (data[2]%400 == 0);
-}
-
-//Verifica se as data no caso o mes, está no limite
-//e retorna o ultimo dia de um determinado mes a partir
-//da logica de um calendario
-int ultimoDia(int *data){
-
-    if(data[1]==2)
-        return 28 + bissexto(data);
-    if(data[1] == 4 || data[1] == 6 || data[1] == 9 || data[1] == 11)
-        return 30;
-    return 31;
-}
 
 //Esta função recebe como paramêtro uma string e faz a verificação
 //se o que foi digitado foi somente numeros e verifica se
 //a data digitada está entre 20/06/1960 a 01/01/2019
-int verificarData(char *entrada){
-  char string[3] = "//";
 
-  if (strstr(entrada, string) != NULL) ///strstr - localiza a primeira ocorrência de uma substring específica em uma string (use //)
-    return 0;
+int verificaData(char *valor){
+    int i;
+    if(verificaNum(valor) == 0)
+        return 0;
+    int dia = -1, ano = -1, mes = -1;
+    sscanf(valor,"%d%*c%d%*c%d",&dia,&mes,&ano); //
+    if(ano > 2019 || ano < 1961){ // Ano não pode ser menor que 1961 ou maior que 2019
+        return 0;
+    }
 
-  if (verificaNum(entrada)!=0)
-    return 0;
-
-  int i = 0;
-  int data[3];
-
-  sscanf(entrada,"%d%*c%d%*c%d",&data[0],&data[1],&data[2]);
-
-  // Realize suas validações. Se alguma não for atingida, retorne '0'
-  if(data[0]<1 || data[0] > ultimoDia(data))
-    return 0;
-  if(data[1]<1 || data[1]>12)
-    return 0;
-  if(data[2]<1961 || data[2]>2019)
-    return 0;
-
-  return 1;
+    if(ano == 1960){       //data de nascimento limite.
+        if(mes < 07){
+            if(dia < 21)
+                return 0;
+        }
+    }
+    if(mes > 12){  // Mes não pode ser maior que 12.
+        return 0;
+    }
+    if(((ano % 4 == 0) || (ano % 400 == 0)) && (ano % 100 != 0)){ // verifica se ano é bissexto.
+        if(mes == 02){
+            if(dia > 29){
+                return 0;
+            }
+        }
+        if(mes == 01 || mes == 03 || mes == 05 || mes == 07 || mes == 8 || mes == 10 || mes == 12){
+            if(dia > 31){
+                return 0;
+            }
+        }
+        else{
+            if(dia > 30){
+                return 0;
+            }
+        }
+    }
+    else{
+        if(mes == 02){
+            if(dia > 28){
+                return 0;
+            }
+        }
+        if(mes == 01 || mes == 03 || mes == 05 || mes == 07 || mes == 8 || mes == 11 || mes == 12){
+            if(dia > 31){
+                return 0;
+            }
+        }
+        else{
+            if(dia > 30){
+                return 0;
+            }
+        }
+    }
+    return 1;
 }

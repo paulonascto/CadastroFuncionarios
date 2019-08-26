@@ -152,3 +152,28 @@
 	<locale.h>
 	"controle.h"
 
+1566834037 source:c:\users\usuario\downloads\cadastrofuncionarios-master\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566826478 c:\users\usuario\downloads\cadastrofuncionarios-master\controle.h
+
+1566825484 source:c:\users\usuario\downloads\cadastrofuncionarios-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566518679 c:\users\usuario\downloads\cadastrofuncionarios-master\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+

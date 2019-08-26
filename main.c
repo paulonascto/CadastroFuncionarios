@@ -2,13 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
-#include "controle.c"
 #include "controle.h"
 
 int main(){
-
-    TDepartamento dept;
-    TFuncionario func;
 
     setlocale(LC_ALL, "Portuguese");
 
@@ -27,7 +23,6 @@ int main(){
     }
     if(arq_func || arq_hist_func || arq_dept || arq_hist_dept || arq_hist_sal){
         menu();
-       // fclose(arq_dept);
 
     }
     fclose(arq_func);
