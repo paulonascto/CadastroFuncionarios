@@ -78,8 +78,7 @@ int verificaNum(char*);
 int pesquisa_Matricula(FILE*,char*);
 int verificarData(char*);
 int verificaData(char*);
-int ultimoDia(int *data);
-int bissexto(int *data);
+int verificaCPF(char*);
 
 ///FUNÇÕES QUE DEVEMOS LEMBRAR DE APAGAR
 void exibeDept(FILE*);
