@@ -1,0 +1,179 @@
+# depslib dependency file v1.0
+1566245108 source:c:\users\usuario\music\cadastrofuncionarios-master\controle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566243396 c:\users\usuario\music\cadastrofuncionarios-master\controle\controle.c
+	<stdio.h>
+	<stdlib.h>
+	"controle.h"
+
+1566246533 c:\users\usuario\music\cadastrofuncionarios-master\controle\controle.h
+
+1566249645 source:c:\users\usuario\music\cadastrofuncionarios-master\controle\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566239268 source:j:\ed i\tp 1\cadastrofuncionarios-master\controle\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566246534 j:\ed i\tp 1\cadastrofuncionarios-master\controle\controle.h
+
+1566245110 source:j:\ed i\tp 1\cadastrofuncionarios-master\controle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566239268 source:f:\paulo henrique\cadastrofuncionarios-master\controle\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566246534 f:\paulo henrique\cadastrofuncionarios-master\controle\controle.h
+
+1566245110 source:f:\paulo henrique\cadastrofuncionarios-master\controle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566244080 source:c:\users\usuario\desktop\cadastrofuncionarios-master\controle\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566243231 c:\users\usuario\desktop\cadastrofuncionarios-master\controle\controle.h
+
+1566243497 source:c:\users\usuario\desktop\cadastrofuncionarios-master\controle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566314182 source:c:\users\nascto\documents\ed i\tp 1\cadastrofuncionarios-master\controle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566314530 c:\users\nascto\documents\ed i\tp 1\cadastrofuncionarios-master\controle\controle.h
+
+1566315189 source:c:\users\nascto\documents\ed i\tp 1\cadastrofuncionarios-master\controle\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566344541 source:d:\mega\tsi\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566347564 d:\mega\tsi\cadastrofuncionarios\controle.h
+
+1566348719 source:d:\mega\tsi\cadastrofuncionarios\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566348720 source:j:\ed i\tp 1\cadastrofuncionarios\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566347566 j:\ed i\tp 1\cadastrofuncionarios\controle.h
+
+1566344542 source:j:\ed i\tp 1\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566394308 source:c:\users\usuario\music\cadastrofuncionarios\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566394491 c:\users\usuario\music\cadastrofuncionarios\controle.h
+
+1566344542 source:c:\users\usuario\music\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566422221 source:c:\users\usuario\desktop\cadastrofuncionarios\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566394492 c:\users\usuario\desktop\cadastrofuncionarios\controle.h
+
+1566421354 source:c:\users\usuario\desktop\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566834037 source:c:\users\usuario\downloads\cadastrofuncionarios-master\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1566826478 c:\users\usuario\downloads\cadastrofuncionarios-master\controle.h
+
+1566825484 source:c:\users\usuario\downloads\cadastrofuncionarios-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566518679 c:\users\usuario\downloads\cadastrofuncionarios-master\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
