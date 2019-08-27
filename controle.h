@@ -5,7 +5,7 @@
 #define MATRICULA 10
 #define NOME 60
 #define DATA 11
-#define CPF 11
+#define CPF 12
 #define RUA 40
 #define BAIRRO 30
 #define COMPLEMENTO 30

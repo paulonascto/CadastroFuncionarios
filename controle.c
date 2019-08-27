@@ -195,8 +195,7 @@ int cadastro_func(FILE *arq_func){
             printf("\nDigite seu CPF: ");
             fgets(func.cpf,CPF,stdin);
             retiraEnter(func.cpf);
-        }while(verificaData(func.cpf)==0);
-
+        }while(verificaCPF(func.cpf)==0);
         fseek(arq_dept,0,SEEK_END);
         func.id = (ftell(arq_func)/sizeof(TFuncionario)) + 1;
         fwrite(&func, sizeof(TFuncionario), 1, arq_func);

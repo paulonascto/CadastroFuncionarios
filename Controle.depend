@@ -6,6 +6,8 @@
 	<locale.h>
 	"controle.h"
 
+1566518679 h"
+
 1566243396 c:\users\usuario\music\cadastrofuncionarios-master\controle\controle.c
 	<stdio.h>
 	<stdlib.h>
@@ -176,4 +178,13 @@
 	<locale.h>
 	<ctype.h>
 	"controle.h"
+
+1566866881 source:/home/nascto7/MEGA/tsi/CadastroFuncionarios/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566867022 /home/nascto7/MEGA/tsi/CadastroFuncionarios/controle.h
 
