@@ -188,3 +188,20 @@
 
 1566867022 /home/nascto7/MEGA/tsi/CadastroFuncionarios/controle.h
 
+1566862857 source:/home/gotcha/Documentos/CadastroFuncionarios/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566870576 /home/gotcha/Documentos/CadastroFuncionarios/controle.h
+
+1566870713 source:/home/gotcha/Documentos/CadastroFuncionarios/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+

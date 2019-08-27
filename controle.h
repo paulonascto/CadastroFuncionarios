@@ -76,9 +76,9 @@ int verificaLetra(char*);
 void retiraEnter(char*);
 int verificaNum(char*);
 int pesquisa_Matricula(FILE*,char*);
-int verificarData(char*);
 int verificaData(char*);
 int verificaCPF(char*);
+int verificaId_Dept(FILE*,long int);
 
 ///FUNÇÕES QUE DEVEMOS LEMBRAR DE APAGAR
 void exibeDept(FILE*);

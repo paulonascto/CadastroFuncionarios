@@ -163,6 +163,20 @@ int pesquisa_Matricula(FILE *arq_func,char *mat){
    return -1;
 }
 
+int verificaId_Dept(FILE *arq_func,long int id){
+   TFuncionario func;
+   int posicao=0;
+   /*posicionando no início do arquivo*/
+   fseek(arq_func,0,SEEK_SET);
+   while(fread(&func,sizeof(TFuncionario),1,arq_func)==1){
+      if(func.id_departamento==id)
+         return posicao;
+      else
+         posicao++;
+   }
+   return -1;
+}
+
 ///Cadastro de Funcionario
 //Função que realiza o cadastramento de Funcionário
 //Retorna 1, caso o cadastrameto estiver sido realizado
@@ -196,6 +210,13 @@ int cadastro_func(FILE *arq_func){
             fgets(func.cpf,CPF,stdin);
             retiraEnter(func.cpf);
         }while(verificaCPF(func.cpf)==0);
+        do{
+            setbuf(stdin,NULL);
+            printf("\nDigite o numero do Departamento: ");
+            scanf("%li",&func.id_departamento);
+        }while(verificaId_Dept(arq_func,func.id)==0);
+
+
         fseek(arq_dept,0,SEEK_END);
         func.id = (ftell(arq_func)/sizeof(TFuncionario)) + 1;
         fwrite(&func, sizeof(TFuncionario), 1, arq_func);
@@ -248,7 +269,6 @@ int verificaCPF(char *cpf){
 //se o que foi digitado foi somente numeros e verifica se
 //a data digitada está entre 20/06/1960 a 01/01/2019
 int verificaData(char *valor){
-    int i;
     if(verificaNum(valor) == 0)
         return 0;
     int dia = -1, ano = -1, mes = -1;
