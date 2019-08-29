@@ -20,9 +20,13 @@
 
 
 
+                    /* ---------------------------------------------------------- SEÇÃO DE ESTRUTURAS USADAS NO PROGRAMA -------------------------------------------------------------- */
+
+
+
 /// Estrutura Funcionários
 typedef struct{
-    long id, id_departamento;
+    long int id, id_departamento;
     char matricula[MATRICULA], nome[NOME], dataNascimento[DATA],
          cpf[CPF], rua[RUA], bairro[BAIRRO], complemento[COMPLEMENTO],
          cidade[CIDADE], uf[UF], cep[CEP], email[EMAIL];
@@ -61,17 +65,33 @@ typedef struct{
 }THistoricoSalario;
 
 
+                                /* ---------------------------------------------------------- SEÇÃO DE ARQUIVOS USADOS NO PROGRAMA -------------------------------------------------------------- */
 
-FILE *arq_func, *arq_hist_func, *arq_dept,*arq_hist_dept,*arq_hist_sal;
 
 
+FILE *arq_func, *arq_hist_func, *arq_dept, *arq_hist_dept, *arq_hist_sal;
+
+
+
+                                /* ---------------------------------------------------------- SEÇÃO DE FUNÇÕES USADAS NO PROGRAMA -------------------------------------------------------------- */
+
+
+
+/// FUNÇÃO QUE PRINTA O MENU DE OPÇÕES NA TELA
 void menu();
 
-///FUNÇÕES PRINCIPAIS DE CADASTRO
+/// FUNÇÕES PRINCIPAIS DE CADASTRO
 int cadastro_dept(FILE*);
-int cadastro_func(FILE*);
+int cadastro_func(FILE*, int);
 
-///FUNÇÕES UTILIZADAS PARA FAZER DIVERSAS VERIFICACOES
+/// FUNÇÃO PARA ALTERAR DADOS DE FUNCIONÁRIOS
+void alteraDadosFunc(FILE*);
+void alterarDeptFunc(FILE*);
+
+/// FUNÇÃO PARA PROCURAR FUNCIONÁRIO
+void consultaFunc(FILE*);
+
+/// FUNÇÕES UTILIZADAS PARA FAZER DIVERSAS VERIFICACOES
 int verificaLetra(char*);
 void retiraEnter(char*);
 int verificaNum(char*);
@@ -79,10 +99,15 @@ int pesquisa_Matricula(FILE*,char*);
 int verificaData(char*);
 int verificaCPF(char*);
 int verificaId_Dept(FILE*,long int);
+int verificaId_Func(FILE*, long int);
 
-///FUNÇÕES QUE DEVEMOS LEMBRAR DE APAGAR
+/// FUNÇÕES PARA EXIBIÇÃO DE ALGUNS DADOS
+void exibeFunc(FILE*, long int);
 void exibeDept(FILE*);
-void exibeFunc(FILE *a);
+void FolhaPag(FILE*);
+
+/// FUNÇÕES QUE DEVEMOS LEMBRAR DE APAGAR
+void exibeHistFunc(FILE*);
 
 
 #endif // CONTROLE_H_INCLUDED

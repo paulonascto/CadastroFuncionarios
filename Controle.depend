@@ -6,7 +6,7 @@
 	<locale.h>
 	"controle.h"
 
-1566518679 h"
+1567084672 h"
 
 1566243396 c:\users\usuario\music\cadastrofuncionarios-master\controle\controle.c
 	<stdio.h>
@@ -154,7 +154,7 @@
 	<locale.h>
 	"controle.h"
 
-1566834037 source:c:\users\usuario\downloads\cadastrofuncionarios-master\controle.c
+1566911982 source:c:\users\usuario\downloads\cadastrofuncionarios-master\controle.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -162,9 +162,9 @@
 	<ctype.h>
 	"controle.h"
 
-1566826478 c:\users\usuario\downloads\cadastrofuncionarios-master\controle.h
+1566906193 c:\users\usuario\downloads\cadastrofuncionarios-master\controle.h
 
-1566825484 source:c:\users\usuario\downloads\cadastrofuncionarios-master\main.c
+1566870825 source:c:\users\usuario\downloads\cadastrofuncionarios-master\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -203,5 +203,158 @@
 	<string.h>
 	<locale.h>
 	<ctype.h>
+	"controle.h"
+
+1566870826 source:f:\paulo henrique\cadastrofuncionarios  b)att\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1566998451 f:\paulo henrique\cadastrofuncionarios  b)att\controle.h
+
+1567003359 source:f:\paulo henrique\cadastrofuncionarios  b)att\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567022437 source:c:\users\usuario\desktop\cadastrofuncionarios  c)alterar dados em teste\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567020653 c:\users\usuario\desktop\cadastrofuncionarios  c)alterar dados em teste\controle.h
+
+1567022319 source:c:\users\usuario\desktop\cadastrofuncionarios  c)alterar dados em teste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567022850 source:c:\users\nascto\desktop\cadastrofuncionarios  c) alterarfunc para entender essa porra\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567020654 c:\users\nascto\desktop\cadastrofuncionarios  c) alterarfunc para entender essa porra\controle.h
+
+1567030634 source:c:\users\nascto\desktop\cadastrofuncionarios  c) alterarfunc para entender essa porra\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567022850 source:c:\users\nascto\desktop\cadastrofuncionarios  c) ready\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567039824 c:\users\nascto\desktop\cadastrofuncionarios  c) ready\controle.h
+
+1567039860 source:c:\users\nascto\desktop\cadastrofuncionarios  c) ready\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567029590 source:/home/aluno/Documentos/CadastroFuncionarios  d) Completo/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567029026 /home/aluno/Documentos/CadastroFuncionarios  d) Completo/controle.h
+
+1567012050 source:/home/aluno/Documentos/CadastroFuncionarios  d) Completo/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567084672 source:j:\testando win\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567084672 j:\testando win\controle.h
+
+1567084672 source:j:\testando win\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567084672 source:c:\users\usuario\desktop\testando win\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567084672 c:\users\usuario\desktop\testando win\controle.h
+
+1567084672 source:c:\users\usuario\desktop\testando win\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567079405 source:/home/aluno/Documentos/testando win2 (1)/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567077864 /home/aluno/Documentos/testando win2 (1)/controle.h
+
+1567073872 source:/home/aluno/Documentos/testando win2 (1)/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567087673 source:f:\paulo henrique\ed i\tp 1\cadastrofuncionario f) ready\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567087115 f:\paulo henrique\ed i\tp 1\cadastrofuncionario f) ready\controle.h
+
+1567084672 source:f:\paulo henrique\ed i\tp 1\cadastrofuncionario f) ready\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
 	"controle.h"
 
