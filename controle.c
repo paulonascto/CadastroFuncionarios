@@ -49,6 +49,9 @@ void menu(){
         case 8:
             alterarSalarioFunc(arq_func);
             break;
+        case 9:
+            relatorioDeptFunc(arq_func);
+            break;
         case 12:
             exibeDept(arq_dept);
             break;
