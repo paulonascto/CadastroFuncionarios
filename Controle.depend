@@ -86,16 +86,16 @@
 	<locale.h>
 	"controle.h"
 
-1566344541 source:d:\mega\tsi\cadastrofuncionarios\main.c
+1567084672 source:d:\mega\tsi\cadastrofuncionarios\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	"controle.h"
 
-1566347564 d:\mega\tsi\cadastrofuncionarios\controle.h
+1567124825 d:\mega\tsi\cadastrofuncionarios\controle.h
 
-1566348719 source:d:\mega\tsi\cadastrofuncionarios\controle.c
+1567128019 source:d:\mega\tsi\cadastrofuncionarios\controle.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
