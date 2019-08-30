@@ -99,7 +99,7 @@ int verificaNum(char*);
 int pesquisa_Matricula(FILE*,char*);
 int verificaData(char*);
 int verificaCPF(char*);
-int verificaId_Dept(FILE*,long int);
+int verificaId_Dept(FILE*,int);
 int verificaId_Func(FILE*, long int);
 
 /// FUNÇÕES PARA EXIBIÇÃO DE ALGUNS DADOS

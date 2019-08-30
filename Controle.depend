@@ -358,3 +358,20 @@
 	<locale.h>
 	"controle.h"
 
+1567130499 source:/home/gotcha/Documentos/CadastroFuncionarios/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567129413 /home/gotcha/Documentos/CadastroFuncionarios/controle.h
+
+1567128827 source:/home/gotcha/Documentos/CadastroFuncionarios/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
