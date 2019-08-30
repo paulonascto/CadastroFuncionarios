@@ -87,6 +87,7 @@ int cadastro_func(FILE*, int);
 /// FUNÇÃO PARA ALTERAR DADOS DE FUNCIONÁRIOS
 void alteraDadosFunc(FILE*);
 void alterarDeptFunc(FILE*);
+void alterarGerenteDept(FILE*);
 
 /// FUNÇÃO PARA PROCURAR FUNCIONÁRIO
 void consultaFunc(FILE*);
