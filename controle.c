@@ -46,13 +46,16 @@ void menu(){
         case 7:
             FolhaPag(arq_func);
             break;
+        case 8:
+            alterarSalarioFunc(arq_func);
+            break;
         case 12:
             exibeDept(arq_dept);
             break;
 
-//        case 13:
-//        exibeFunc(arq_func);
-//           break;
+        case 13:
+            exibeHistSal(arq_hist_sal);
+           break;
 
         case 10:
             exibeHistFunc(arq_hist_func);
@@ -462,6 +465,117 @@ void FolhaPag(FILE *arq_func){
     printf("Nome: %s\n", func.nome);
     printf("Salario: %.2f\n", func.salario);
 }
+/// Função que altera gerente de um determinado departamento
+void alterarGerenteDept(FILE *a){
+    TFuncionario func;
+    long int posDept,posFunc;
+    TDepartamento dept;
+    THistoricoDepartamento histDept;
+
+
+    do{
+        printf("Digite o numero do departamento que deseja alterar o gerente: ");
+        scanf("%li",&dept.id);
+        posDept = verificaId_Dept(a,dept.id);
+        printf("posicao dept: %li",posDept);
+    }while(posDept==-1);
+    do{
+        printf("Digite a matricula do novo gerente: ");
+        setbuf(stdin, NULL);
+        fgets(func.matricula, MATRICULA, stdin);
+        retiraEnter(func.matricula);
+        posFunc = pesquisa_Matricula(arq_func,func.matricula);
+        printf("Posicao retornada funcionario: %li",posFunc);
+    }while(posFunc==-1);
+    do{
+        setbuf(stdin,NULL);
+        printf("\nDigite a Data de alteração do gerente (Ex: dd/mm/aaaa): ");
+        fgets(histDept.data,DATA,stdin);
+        retiraEnter(histDept.data);
+    }while(verificaData(histDept.data)==0);
+    fseek(arq_dept,posDept * sizeof(TDepartamento),SEEK_SET);
+    fread(&dept,sizeof(TDepartamento),1,arq_dept);
+    printf("id departamento: %li", dept.id);
+    dept.id_gerente = 1+posFunc;
+    fseek(arq_dept,posDept * sizeof(TDepartamento),SEEK_SET);
+    fwrite(&dept,sizeof(TDepartamento),1,arq_dept);
+
+    histDept.id_departamento = 1+posDept;
+    histDept.id_gerente = dept.id_gerente;
+    fseek(arq_hist_dept, 0, SEEK_END);
+    fwrite(&histDept, sizeof(THistoricoDepartamento), 1, arq_hist_dept);
+
+}
+
+/// Função que altera salário de funcionário
+void alterarSalarioFunc(FILE *arq_func){
+    int posFunc;
+    float novoSalario;
+    long int idFunc;
+    TFuncionario func;
+    THistoricoSalario histSal;
+
+    do{
+        printf("Informe a matricula do funcionario que deseja alterar o salario: ");
+        setbuf(stdin, NULL);
+        fgets(func.matricula, MATRICULA, stdin);
+        retiraEnter(func.matricula);
+    }while(pesquisa_Matricula(arq_func, func.matricula)==-1);
+    posFunc = pesquisa_Matricula(arq_func, func.matricula);
+    fseek(arq_func, posFunc * sizeof(TFuncionario), SEEK_SET);
+    fread(&func, sizeof(TFuncionario), 1, arq_func);
+    printf("Informe o novo salario do funcionario: ");
+    scanf("%f", &novoSalario);
+    func.salario = novoSalario;
+    idFunc = func.id;
+    histSal.id_funcionario = idFunc;
+    histSal.salario = novoSalario;
+    printf("Informe o ano da alteracao(Ex: aaaa): ");
+    scanf("%hu", &histSal.ano);
+    printf("Informe o mes da alteracao(Ex: mm): ");
+    scanf("%hu", &histSal.mes);
+    fseek(arq_func, posFunc * sizeof(TFuncionario), SEEK_SET);
+    fwrite(&func, sizeof(TFuncionario), 1, arq_func);
+    fseek(arq_hist_sal, 0, SEEK_END);
+    fwrite(&histSal, sizeof(THistoricoSalario), 1, arq_hist_sal);
+}
+
+/// Função que exibe relatório de departamento
+void relatorioDeptFunc(FILE *arq_func){
+    int posDept;
+    TDepartamento dept;
+    TFuncionario func;
+
+    do{
+        printf("Digite o numero do departamento que deseja fazer o relatorio de Funcionarios: ");
+        scanf("%li",&dept.id);
+        posDept = verificaId_Dept(arq_dept,dept.id);
+    }while(posDept==-1);
+
+    fseek(arq_dept,posDept * sizeof(TDepartamento),SEEK_SET);
+    fread(&dept,sizeof(TDepartamento),1,arq_dept);
+    printf("\nCodigo do Departamento: %li",dept.id);
+    printf("\nNome do Departamento: %s",dept.nome);
+
+    fseek(arq_func,0,SEEK_SET);
+    while(fread(&func,sizeof(TFuncionario),1,arq_func)){
+        if(dept.id == func.id_departamento)
+            printf("\nMatricula: %s \t\tNome: %s \t\tSalario: %f ",func.matricula,func.nome,func.salario);
+    }
+}
+
+
+/// apagar depois
+void exibeHistSal(FILE *arq_hist_sal){
+    THistoricoSalario hist;
+    fseek(arq_hist_sal, 0, SEEK_SET);
+    while(fread(&hist, sizeof(THistoricoSalario), 1, arq_hist_sal)==1){
+        printf("id departamento: %li\n", hist.id_funcionario);
+        printf("id departamento: %.2f\n", hist.salario);
+        printf("id departamento: %hu\n", hist.ano);
+        printf("id departamento: %hu\n", hist.mes);
+    }
+}
 
 
 /// Função que verifica CPF
@@ -564,30 +678,4 @@ int verificaData(char *valor){
 
 //Função que recebe como parâmetro um arquivo e altera o
 //gerente de um determiando departamento
-void alterarGerenteDept(FILE *a){
-    TFuncionario func;
-    long int posDept,posFunc;
-    TDepartamento dept;
 
-
-    do{
-        printf("Digite o numero do departamento que deseja alterar o gerente: ");
-        scanf("%li",&dept.id);
-        posDept = verificaId_Dept(a,dept.id);
-        printf("posicao dept: %li",posDept);
-    }while(posDept==-1);
-    do{
-        printf("Digite a matricula do novo gerente: ");
-        setbuf(stdin, NULL);
-        fgets(func.matricula, MATRICULA, stdin);
-        retiraEnter(func.matricula);
-        posFunc = pesquisa_Matricula(arq_func,func.matricula);
-        printf("Posicao retornada funcionario: %li",posFunc);
-    }while(posFunc==-1);
-    fseek(arq_dept,posDept * sizeof(TDepartamento),SEEK_SET);
-    fread(&dept,sizeof(TDepartamento),1,arq_dept);
-    printf("id departamento: %li", dept.id);
-    dept.id_gerente = 1+posFunc;
-    fseek(arq_dept,posDept * sizeof(TDepartamento),SEEK_SET);
-    fwrite(&dept,sizeof(TDepartamento),1,arq_dept);
-}

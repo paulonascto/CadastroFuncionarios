@@ -86,16 +86,16 @@
 	<locale.h>
 	"controle.h"
 
-1567084672 source:d:\mega\tsi\cadastrofuncionarios\main.c
+1567131701 source:d:\mega\tsi\cadastrofuncionarios\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	"controle.h"
 
-1567124825 d:\mega\tsi\cadastrofuncionarios\controle.h
+1567131701 d:\mega\tsi\cadastrofuncionarios\controle.h
 
-1567128019 source:d:\mega\tsi\cadastrofuncionarios\controle.c
+1567131701 source:d:\mega\tsi\cadastrofuncionarios\controle.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -188,16 +188,27 @@
 
 1566867022 /home/nascto7/MEGA/tsi/CadastroFuncionarios/controle.h
 
-1566862857 source:/home/gotcha/Documentos/CadastroFuncionarios/main.c
+1567128827 source:/home/gotcha/Documentos/CadastroFuncionarios/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	"controle.h"
 
-1566870576 /home/gotcha/Documentos/CadastroFuncionarios/controle.h
+1567129413 /home/gotcha/Documentos/CadastroFuncionarios/controle.h
 
-1566870713 source:/home/gotcha/Documentos/CadastroFuncionarios/controle.c
+1567130499 source:/home/gotcha/Documentos/CadastroFuncionarios/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -358,7 +369,16 @@
 	<locale.h>
 	"controle.h"
 
-1567130499 source:/home/gotcha/Documentos/CadastroFuncionarios/controle.c
+1567131702 source:f:\paulo henrique\cadastrofuncionarios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567193793 f:\paulo henrique\cadastrofuncionarios\controle.h
+
+1567193914 source:f:\paulo henrique\cadastrofuncionarios\controle.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -366,12 +386,20 @@
 	<ctype.h>
 	"controle.h"
 
-1567129413 /home/gotcha/Documentos/CadastroFuncionarios/controle.h
-
-1567128827 source:/home/gotcha/Documentos/CadastroFuncionarios/main.c
+1567131702 source:j:\ed i\tp 1\cadastrofuncionarios h) ready\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
+	"controle.h"
+
+1567195806 j:\ed i\tp 1\cadastrofuncionarios h) ready\controle.h
+
+1567195850 source:j:\ed i\tp 1\cadastrofuncionarios h) ready\controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
 	"controle.h"
 

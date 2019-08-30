@@ -52,14 +52,14 @@ typedef struct{
 
 /// Estrutura Historico Departamento
 typedef struct{
-    long id_departamento, id_gerente;
+    long int id_departamento, id_gerente;
     char data[DATA];
 }THistoricoDepartamento;
 
 
 /// Estrutura Historico Salario
 typedef struct{
-    long id_funcionario;
+    long int id_funcionario;
     float salario;
     unsigned short int mes, ano;
 }THistoricoSalario;
@@ -88,6 +88,7 @@ int cadastro_func(FILE*, int);
 void alteraDadosFunc(FILE*);
 void alterarDeptFunc(FILE*);
 void alterarGerenteDept(FILE*);
+void alterarSalarioFunc(FILE*);
 
 /// FUNÇÃO PARA PROCURAR FUNCIONÁRIO
 void consultaFunc(FILE*);
@@ -106,9 +107,11 @@ int verificaId_Func(FILE*, long int);
 void exibeFunc(FILE*, long int);
 void exibeDept(FILE*);
 void FolhaPag(FILE*);
+void relatorioDeptFunc(FILE*);
 
 /// FUNÇÕES QUE DEVEMOS LEMBRAR DE APAGAR
 void exibeHistFunc(FILE*);
+void exibeHistSal(FILE*);
 
 
 #endif // CONTROLE_H_INCLUDED
