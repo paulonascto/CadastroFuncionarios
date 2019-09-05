@@ -108,6 +108,7 @@ void exibeFunc(FILE*, long int);
 void exibeDept(FILE*);
 void FolhaPag(FILE*);
 void relatorioDeptFunc(FILE*);
+void relatorioDeptGer(FILE*);
 
 /// FUNÇÕES QUE DEVEMOS LEMBRAR DE APAGAR
 void exibeHistFunc(FILE*);
