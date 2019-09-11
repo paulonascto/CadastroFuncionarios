@@ -6,7 +6,7 @@
 	<locale.h>
 	"controle.h"
 
-1567084672 h"
+1567131702 h"
 
 1566243396 c:\users\usuario\music\cadastrofuncionarios-master\controle\controle.c
 	<stdio.h>
@@ -85,17 +85,29 @@
 	<string.h>
 	<locale.h>
 	"controle.h"
+<<<<<<< HEAD
 
 1567131702 source:d:\mega\tsi\cadastrofuncionarios\main.c
+=======
+
+1567131701 source:d:\mega\tsi\cadastrofuncionarios\main.c
+>>>>>>> 8177be0ea53821319506be5fc272056ee372e1bb
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	"controle.h"
+<<<<<<< HEAD
 
 1567453690 d:\mega\tsi\cadastrofuncionarios\controle.h
 
 1568158157 source:d:\mega\tsi\cadastrofuncionarios\controle.c
+=======
+
+1567131701 d:\mega\tsi\cadastrofuncionarios\controle.h
+
+1567131701 source:d:\mega\tsi\cadastrofuncionarios\controle.c
+>>>>>>> 8177be0ea53821319506be5fc272056ee372e1bb
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -414,6 +426,23 @@
 1567453690 c:\users\usuario\desktop\cadastrofuncionarios h) ready\controle.h
 
 1567131702 source:c:\users\usuario\desktop\cadastrofuncionarios h) ready\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"controle.h"
+
+1567731511 source:/home/gotcha/Documentos/CadastroFuncionarios/controle.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<ctype.h>
+	"controle.h"
+
+1567731511 /home/gotcha/Documentos/CadastroFuncionarios/controle.h
+
+1567731508 source:/home/gotcha/Documentos/CadastroFuncionarios/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
