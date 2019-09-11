@@ -596,12 +596,12 @@ void relatorioDeptGer(FILE *arq_dept){
 }
 
 
-/// apagar depois
+/// Funçao que exibe historico salario de um determinado periodo
 void exibeHistSal(FILE *arq_hist_sal){
     THistoricoSalario hist;
     TFuncionario func;
     char testeMat[MATRICULA];
-    unsigned short int testeAno, testeMes;
+    unsigned short int testeAnoIni, testeMesIni, testeAnoFim, testeMesFim;
     int posFunc;
     do{
         printf("Informe a matricula do funcionario que deseja exibir o historico de salario: ");
@@ -612,14 +612,19 @@ void exibeHistSal(FILE *arq_hist_sal){
     posFunc = pesquisa_Matricula(arq_func, testeMat);
     fseek(arq_func, posFunc * sizeof(TFuncionario), SEEK_SET);
     fread(&func, sizeof(TFuncionario), 1, arq_func);
-    printf("Informe o ano do historico: ");
-    scanf("%hu", &testeAno);
-    printf("Informe o mes do historico: ");
-    scanf("%hu", &testeMes);
+    printf("Informe o ano inicio do historico: ");
+    scanf("%hu", &testeAnoIni);
+    printf("Informe o mes inicio do historico: ");
+    scanf("%hu", &testeMesIni);
+    printf("Informe o ano final do historico: ");
+    scanf("%hu", &testeAnoFim);
+    printf("Informe o mes final do historico: ");
+    scanf("%hu", &testeMesFim);
+
 
     fseek(arq_hist_sal, 0, SEEK_SET);
     while(fread(&hist, sizeof(THistoricoSalario), 1, arq_hist_sal)==1){
-        if(hist.id_funcionario == func.id && testeAno == hist.ano && testeMes == hist.mes){
+        if(hist.id_funcionario == func.id && hist.ano >= testeAnoIni && hist.mes >= testeMesIni && hist.ano <= testeAnoFim && hist.mes <= testeMesFim){
             printf("\n\nID Funcionario: %li\n", hist.id_funcionario);
             printf("Salario: %.2f\n", hist.salario);
             printf("Ano de alteracao: %hu\n", hist.ano);
